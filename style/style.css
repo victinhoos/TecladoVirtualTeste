@@ -1,0 +1,180 @@
+        :root {
+            --cor-principal: #222222;
+            --cor-secundaria: #111111;
+            --cor-destaque: #F59E0B;
+            --cor-fundo-claro: #dddddd;
+            --cor-texto: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #333333;
+            transform: scale(0.9); 
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            color: white;
+            margin-bottom: 1.2rem ;
+        }
+        .teclado-container {
+            background-color: #222222;
+            padding: 20px;
+            border-radius: 15px;
+            border-bottom: 8px solid #111;
+            display: flex;
+            gap: 15px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .tecla {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 50px;
+            height: 50px;
+            
+            background-color: var(--cor-fundo-claro);
+            color: var(--cor-texto);
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 6px;
+            border-bottom: 4px solid #999;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.05s ease;
+        }
+
+        .tecla:active {
+            transform: translateY(4px);
+            border-bottom: 0px solid transparent;
+            background-color: #ccc;
+        }
+
+        .tecla.ativa {
+            background-color: #fff; 
+            transform: translateY(4px); 
+            box-shadow: none;
+            border-bottom: 0px solid transparent;
+        }
+        
+        .tecla.ativada {
+            background-color: rgb(176, 255, 169) !important;
+            color: #111 !important;
+        }
+
+        .f-size {
+            font-size: 0.75rem;
+        }
+
+        .cor-destaque {
+            background-color: var(--cor-destaque);
+            border-bottom-color: #c27b00;
+            color: #fff;
+        }
+        .cor-destaque:active {
+            background-color: #d98e0a;
+        }
+
+
+        .secao-principal {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .linha {
+            display: flex;
+            gap: 6px;
+        }
+
+        .linha-f {
+            margin-bottom: 15px; 
+        }
+        .espacamento {
+            width: 25px; 
+        }
+        .backspace { width: 106px; }
+        .tab       { width: 75px; align-items: flex-start; padding-left: 10px; }
+        .enter-parte1 { width: 80px; } 
+        .caps      { width: 90px; align-items: flex-start; padding-left: 10px; position: relative;}
+        .caps::after { 
+            content: ''; position: absolute; right: 8px; top: 8px; width: 6px; height: 6px; 
+            background: #333; border-radius: 50%; 
+        }
+
+        .enter     { flex-grow: 1; }
+        .shift-l   { width: 115px; justify-content: flex-start; padding-left: 10px; }
+        .shift-r   { flex-grow: 1; justify-content: flex-end; padding-right: 10px;}
+        .ctrl, .alt, .win, .menu { width: 65px; }
+        .espaco    { flex-grow: 1; } 
+
+    
+        .secao-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+        }
+
+        .nav-topo, .nav-meio {
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            gap: 6px;
+        }
+        .nav-topo {
+            margin-bottom: 15px; 
+        }
+
+        .nav-setas {
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            gap: 6px;
+            margin-top: auto; 
+        }
+        .invisivel {
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .secao-num {
+            display: grid;
+            grid-template-columns: repeat(4, 50px); 
+            grid-template-rows: repeat(5, 50px);
+            gap: 6px;
+            margin-top: 65px; 
+        }
+
+        .num-mais {
+            grid-column: 4;      
+            grid-row: 2 / 3;    
+            height: 100%;        
+        }
+    
+        .num-ponto-extra {
+            grid-column: 4;
+            grid-row: 3 / 4;
+            height: 100%;
+        }
+
+        .num-enter {
+            grid-column: 4;
+            grid-row: 4 / 6;    
+            height: 100%;
+        }
+        .num-zero {
+            grid-column: 1 / 3; 
+            width: 100%;
+        }
