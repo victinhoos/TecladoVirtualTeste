@@ -36,4 +36,4 @@ Você pode rodar este projeto localmente de forma simples:
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/SEU-USUARIO/NOME-DO-REPO.git](https://github.com/SEU-USUARIO/NOME-DO-REPO.git)
+   git clone https://github.com/victinhoos/TecladoVirtualTeste.git
